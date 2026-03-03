@@ -6,8 +6,6 @@ import { Metadata } from 'next';
 import { colors } from '@/data/config/colors.js';
 
 import '@/css/globals.css';
-import { SearchProvider } from '@/components/shared/SearchProvider';
-import { AnalyticsWrapper } from '@/components/shared/Analytics';
 
 const displayFont = Nunito_Sans({
   subsets: ['latin'],
@@ -91,55 +89,16 @@ export default function RootLayout({
         `}
         </style>
 
-        <link
-          rel="apple-touch-icon"
-          sizes="76x76"
-          href="/static/favicons/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/static/favicons/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/static/favicons/favicon-16x16.png"
-        />
+        <link rel="icon" type="image/png" href="/static/favicons/favicon.png" />
+        <link rel="apple-touch-icon" href="/static/favicons/favicon.png" />
         <link rel="manifest" href="/static/favicons/manifest.webmanifest" />
-        <link
-          rel="mask-icon"
-          href="/static/favicons/safari-pinned-tab.svg"
-          color="#5bbad5"
-        />
-        <meta name="generator" content="Shipixen" />
-        <meta name="msapplication-TileColor" content="#000000" />
-        <meta
-          name="theme-color"
-          media="(prefers-color-scheme: light)"
-          content="#fff"
-        />
-        <meta
-          name="theme-color"
-          media="(prefers-color-scheme: dark)"
-          content="#000"
-        />
-        <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
 
-      <body className="flex flex-col bg-white text-black antialiased dark:bg-gray-950 dark:text-white min-h-screen">
+      <body className="flex flex-col bg-white text-black antialiased dark:bg-gray-950 dark:text-white min-h-screen" suppressHydrationWarning>
         <ThemeProviders>
-          <AnalyticsWrapper />
-
-          <div className="w-full flex flex-col justify-between items-center font-sans">
-            <SearchProvider>
-              <main className="w-full flex flex-col items-center mb-auto">
-                {children}
-              </main>
-            </SearchProvider>
-          </div>
+          <main className="w-full flex flex-col min-h-screen">
+            {children}
+          </main>
         </ThemeProviders>
       </body>
     </html>

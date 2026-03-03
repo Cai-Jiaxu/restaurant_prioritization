@@ -1,8 +1,6 @@
 export { ActiveLink } from './ActiveLink';
 export { AnalyticsWrapper } from './Analytics';
-export { Footer } from './Footer';
 export { FooterSupportButton } from './FooterSupportButton';
-export { Header } from './Header';
 export { Image } from './Image';
 export { CustomLink } from './Link';
 export { CustomLink as Link } from './Link';
