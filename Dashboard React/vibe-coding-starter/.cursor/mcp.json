@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "Context7": {
+      "title": "Context7 AI assistant",
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"]
+    },
+
+    "Playwright": {
+      "title": "Playwright Test Runner",
+      "command": "npx @playwright/mcp@latest",
+      "env": {}
+    }
+  }
+}
