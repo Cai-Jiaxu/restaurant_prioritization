@@ -1,2 +1,3 @@
 # Large local data - not for version control
 data/
+.venv/
