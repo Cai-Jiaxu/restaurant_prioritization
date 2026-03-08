@@ -53,10 +53,10 @@ export function PortfolioScatter({ restaurants }: PortfolioScatterProps) {
                 <XAxis
                     type="number"
                     dataKey="x"
-                    name="Expected KPI"
+                    name="Platform Performance"
                     domain={['auto', 'auto']}
                     tickFormatter={(val) => Math.round(val).toString()}
-                    label={{ value: 'Expected KPI Score', position: 'insideBottom', offset: -10, fill: '#94a3b8', fontSize: 11 }}
+                    label={{ value: 'Platform Performance Score', position: 'insideBottom', offset: -10, fill: '#94a3b8', fontSize: 11 }}
                     tick={{ fontSize: 11, fill: '#94a3b8' }}
                     axisLine={false}
                     tickLine={false}

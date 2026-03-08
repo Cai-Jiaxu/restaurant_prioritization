@@ -310,15 +310,15 @@ export default function DashboardPage() {
                     <div>
                       <h2 className="text-base font-semibold text-slate-800 dark:text-slate-100">Portfolio Risk & Opportunity Map</h2>
                       <p className="text-xs text-slate-400 dark:text-slate-500 mt-0.5">
-                        Bubble size = priority score · Colour = ML segment
+                        X = platform performance · Y = external quality (Google Maps) · Bubble size = priority score · Only restaurants with Google Maps data are plotted (~10% of portfolio)
                       </p>
                     </div>
                     <PortfolioScatter restaurants={filteredRestaurants} />
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
-                      <div className="p-2 bg-emerald-100 dark:bg-emerald-950/30 rounded-lg border border-emerald-300 dark:border-emerald-800/30 text-emerald-800 dark:text-emerald-400">🟢 Top-Right: High performance + quality</div>
-                      <div className="p-2 bg-violet-100 dark:bg-violet-950/30 rounded-lg border border-violet-300 dark:border-violet-800/30 text-violet-800 dark:text-violet-300">🟣 Bottom-Right: Quality, low performance → Hidden Gems</div>
-                      <div className="p-2 bg-red-100 dark:bg-red-950/30 rounded-lg border border-red-300 dark:border-red-800/30 text-red-800 dark:text-red-400">🔴 Top-Left: Deteriorating → At Risk</div>
-                      <div className="p-2 bg-slate-200 dark:bg-slate-800/50 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-400">⚪ Bottom-Left: Average / Stable</div>
+                      <div className="p-2 bg-slate-100 dark:bg-slate-800/50 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300">↗ Top-Right: High platform performance + strong public reputation</div>
+                      <div className="p-2 bg-slate-100 dark:bg-slate-800/50 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300">↖ Top-Left: Well-regarded publicly, underperforming on platform → Hidden Gems cluster here</div>
+                      <div className="p-2 bg-slate-100 dark:bg-slate-800/50 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300">↘ Bottom-Right: Strong platform performer, limited external signal</div>
+                      <div className="p-2 bg-slate-100 dark:bg-slate-800/50 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300">↙ Bottom-Left: Low on both — background portfolio</div>
                     </div>
                   </div>
                 )}
